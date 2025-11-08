@@ -19,6 +19,7 @@ namespace LoremPicsumApi
             var response = await httpClient.GetAsync($"{apiUrl}/v2/list/");
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetImage(int id)
         {
             var response = await httpClient.GetAsync($"{apiUrl}/id/{id}/info/");
